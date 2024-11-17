@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ Chuyên Gia Cầu Thủ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hệ Chuyên Gia Cầu Thủ</h1>
+      <p>Hãy chọn tiêu chí để tìm cầu thủ phù hợp nhất!</p>
+    </header>
+
+    <main>
+      <form id="criteriaForm">
+        <div class="criteria-group">
+          <label for="position">Vị trí:</label>
+          <select id="position" name="position">
+            <option value="GK">GK</option>
+            <option value="DF">DF</option>
+            <option value="MF">MF</option>
+            <option value="FW">FW</option>
+          </select>
+        </div>
+
+        <div class="criteria-group">
+          <label for="value">Giá trị chuyển nhượng:</label>
+          <select id="value" name="value">
+            <option value="Less than 2M$">Less than 2M$</option>
+            <option value="2M$ and 5M$">2M$ and 5M$</option>
+            <option value="5M$ and 10M$">5M$ and 10M$</option>
+            <option value="Up to 10M$">Up to 10M$</option>
+          </select>
+        </div>
+
+        <!-- Thêm các tiêu chí tương tự -->
+        <div class="criteria-group">
+          <label for="age">Tuổi:</label>
+          <select id="age" name="age">
+            <option value="Less than 18">Less than 18</option>
+            <option value="18 and 23">18 and 23</option>
+            <option value="23 and 30">23 and 30</option>
+            <option value="Up to 30">Up to 30</option>
+          </select>
+        </div>
+
+        <div class="criteria-group">
+          <label for="country">Quốc gia:</label>
+          <select id="country" name="country">
+            <option value="Europe ML">Europe ML</option>
+            <option value="Africa ML">Africa ML</option>
+            <option value="Asia ML">Asia ML</option>
+            <option value="America ML">America ML</option>
+            <option value="Viet Nam">Viet Nam</option>
+          </select>
+        </div>
+
+        <div class="criteria-group">
+          <label for="contracttime">Thoi han hop dong:</label>
+          <select id="contracttime" name="contracttime">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <!-- Các tiêu chí khác -->
+        <!-- Để tiết kiệm không gian, bạn tiếp tục thêm các dropdown tương tự cho tất cả 23 tiêu chí -->
+
+        <button type="submit">Tìm kiếm</button>
+      </form>
+
+      <section id="results">
+        <h2>Kết quả gợi ý:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tên</th>
+              <th>Vị trí</th>
+              <th>Tuổi</th>
+              <th>Giá trị</th>
+              <th>Quốc gia</th>
+              <th>Thoi han hop dong</th>
+              <!-- Thêm các cột nếu cần -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Kết quả sẽ được chèn tại đây bởi JavaScript -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

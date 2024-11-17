@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin cầu thủ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Thông tin cầu thủ</h1>
+    </header>
+
+    <main>
+      <div id="playerInfo">
+        <!-- Thông tin cầu thủ sẽ được hiển thị ở đây -->
+      </div>
+      <button onclick="goBack()">Quay lại</button>
+    </main>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      // Lấy tên cầu thủ từ URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const playerName = urlParams.get("name");
+
+      // Tải thông tin cầu thủ từ cơ sở dữ liệu
+      fetch("api/player_details.php?name=" + encodeURIComponent(playerName))
+        .then((response) => response.json())
+        .then((player) => {
+          if (player) {
+            document.getElementById("playerInfo").innerHTML = `
+                        <h2>${player.name}</h2>
+                        <img src="assets/${player.image}" alt="${player.name}" >
+                        <p>Vị trí: ${player.position}</p>
+                        <p>Tuổi: ${player.age}</p>
+                        <p>Giá trị chuyển nhượng: ${player.value}</p>
+                        <p>Quốc gia: ${player.country}</p>
+                        <p>Thời hạn hợp đồng: ${player.contracttime}</p>
+                    `;
+          } else {
+            document.getElementById(
+              "playerInfo"
+            ).innerHTML = `<p>Không tìm thấy thông tin cầu thủ.</p>`;
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching player details:", error);
+        });
+    </script>
+  </body>
+</html>

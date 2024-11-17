@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #4caf50;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.criteria-group {
+  margin-bottom: 15px;
+}
+
+.criteria-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.criteria-group select {
+  width: 100%;
+  padding: 8px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+#playerInfo img {
+  max-width: 300px; /* Đặt chiều rộng tối đa cho ảnh */
+  height: auto; /* Giữ tỉ lệ khung hình */
+  border-radius: 10px; /* Tạo góc bo tròn (tùy chọn) */
+  margin: 10px 0; /* Khoảng cách trên dưới */
+}
